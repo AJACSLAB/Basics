@@ -361,11 +361,13 @@
 ### VM vs Container vs On-Premises
 ![Preview](./Images/Image15.png)
 
+![Preview](./Images/Image17.png)
+
 * Earlier we used to run applications directly on physical servers and then we moved to hypervisors to cut down the Capex (Capital Expenditure) and OpEX (Operation Expenditure)
-* Host Operating System: A host is any hardware device that has the capability of permitting access to a network via a user interface, specialized software, network address, protocol stack, or any other means.
-* Hypervisor: A hypervisor is a software that creates and manages virtual machines, allowing multiple operating systems to run on a single physical machine simultaneously.
-* Virtual Machine (VM): A virtual machine is a software emulation of a physical computer, allowing multiple operating systems to run concurrently on a single physical machine.
-* Containers: Containers are lightweight, portable, and isolated software packages that contain everything needed to run an application, including libraries and dependencies.
+* **Host Operating System**: A host is any hardware device that has the capability of permitting access to a network via a user interface, specialized software, network address, protocol stack, or any other means.
+* **Hypervisor**: A hypervisor is a software that creates and manages virtual machines, allowing multiple operating systems to run on a single physical machine simultaneously.
+* **Virtual Machine (VM)**: A virtual machine is a software emulation of a physical computer, allowing multiple operating systems to run concurrently on a single physical machine.
+* **Containers**: Containers are lightweight, portable, and isolated software packages that contain everything needed to run an application, including libraries and dependencies.
 * A container is a bundle of Application, Application libraries required to run your application and the minimum system dependencies.
 * A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
@@ -375,3 +377,77 @@
 * **Static IP**:When a device is assigned a static IP address, the address does not change.
 * **Dynamic IP**:Most devices use dynamic IP addresses, which are assigned by the network when they connect and change over time.
 
+### Kubernetes(K8's)
+* Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management.
+
+* **Features:**
+    * Container Orchestration
+    * Service Discovery and Load Balancing
+    * Self-Healing
+    * Scalability
+    * Automated Rollouts and Rollbacks
+    * Resource Management
+
+* **Benfits:**
+    * Container Orchestration
+    * Scalability
+    * High Availability
+    * Self-Healing
+    * Resource Efficiency
+    * Portability
+
+#### Kubernetes Architecture:
+![Preview](./Images/Image18.png)
+* **Kubectl**: This is a command line tool to communicate with k8s api server.
+* Using kubectl we interact with k8s(logical view). But in actual view, kubectl will speak with kube-apiserver.
+
+* **Workflow of k8s when we create a pod:**
+![Preview](./Images/Image19.png)
+
+### Docker
+
+* **Docker Desktop**: Docker desktop is easy to install application and it enables to build and share containerized applications and micro services as well.
+
+* Docker daemon, Docker client, Docker compose, docker container trust and credential helper and kubernetes helper.
+
+* **Docker registry**:  Means it will store our registries private and public.
+* **Dockerfile**: Providing the steps to build a docker image.
+* **Docker networking**: Docker networking enables a user to link a Docker container to as many networks as he/she requires.
+* **Docker Volume**: A Docker volume is an independent file system entirely managed by Docker.
+
+#### Docker Architecture:
+![Preview](./Images/Image20.png)
+
+* **Docker client**: A cmd line to interact with docker engine.
+* **docker build** à docker image build which is used to build an image using dockerfile.
+* **docker pull** à docker image pull is used to pull the image from docker registery if the image is not present in local.
+* **docker container run** à used to create and run the container.
+* **Docker Host**: Where docker is installed.
+* **Docker Daemon**: This is like the "brain" of Docker, always running in the background on your computer. It manages everything related to Docker, like creating, running, and stopping containers.
+* **Docker Client**: Think of this as your way of talking to the Docker Daemon. It's a tool you use to give commands to Docker, like telling it to start or stop a container.
+* **Docker Images**: These are like pre-packaged software applications. They contain all the necessary files and settings to run a specific program. You can create your own images or use ones created by others.
+* **Docker Registries**: Imagine these as online stores for Docker images. You can download images from registries like Docker Hub or create your own private registry to store and share images within your team.
+* **Docker Containers**: These are like the actual running programs based on Docker images. Each container is isolated from others and runs as if it were its own mini-computer, with its own files, network settings, and resources.
+
+#### Difference b/w Docker and Kunbernetes
+![Preview](./Images/Image21.png)
+
+### Basics of Networking
+
+#### Port Numbers
+![Preview](./Images/Image22.png)
+
+* **What are the different port numbers?**
+* There are 65,535 possible port numbers, although not all are in common use. Some of the most commonly used ports, along with their associated networking protocol, are:
+    * Ports 20 and 21: File Transfer Protocol (FTP). FTP is for transferring files between a client and a server.
+    * Port 22: Secure Shell (SSH). SSH is one of many tunneling protocols that create secure network connections.
+    * Port 25: Historically, Simple Mail Transfer Protocol (SMTP). SMTP is used for email.
+    * Port 53: Domain Name System (DNS). DNS is an essential process for the modern Internet; it matches human-readable domain names to machine-readable IP addresses, enabling users to load websites and applications without memorizing a long list of IP addresses.
+    * Port 80: Hypertext Transfer Protocol (HTTP). HTTP is the protocol that makes the World Wide Web possible.
+    * Port 123: Network Time Protocol (NTP). NTP allows computer clocks to sync with each other, a process that is essential for encryption.
+    * Port 179: Border Gateway Protocol (BGP). BGP is essential for establishing efficient routes between the large networks that make up the Internet (these large networks are called autonomous systems). Autonomous systems use BGP to broadcast which IP addresses they control.
+    * Port 443: HTTP Secure (HTTPS). HTTPS is the secure and encrypted version of HTTP. All HTTPS web traffic goes to port 443. Network services that use HTTPS for encryption, such as DNS over HTTPS, also connect at this port.
+    * Port 500: Internet Security Association and Key Management Protocol (ISAKMP), which is part of the process of setting up secure IPsec connections.
+    * Port 587: Modern, secure SMTP that uses encryption.
+    * Port 3389: Remote Desktop Protocol (RDP). RDP enables users to remotely connect to their desktop computers from another device.
+    The Internet Assigned Numbers Authority (IANA) maintains the full list of port numbers and protocols assigned to them.
