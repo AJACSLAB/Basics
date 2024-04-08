@@ -295,10 +295,34 @@
 ### Cloud Plarform (CP)
 
 * **Difference b/w AWS, Azure, and GCP Services?**
-![Preview](./Images/Image9.png)
-![Preview](./Images/Image10.png)
-![Preview](./Images/Image11.png)
-![Preview](./Images/Image12.png)
+
+| | | | | |
+|-|-|-|-|-|
+| | | | | |
+| |AWS|Azure|GCP|Definition & Use Case|
+| |EC2 (Elastic Cloud Compute) (Instances (running), Auto Scaling Groups, Elastic IPS, Instances, Key pairs, Load balances, Placement groups, Security groups, Snapshorts, Volumes) |Virtual Machines|Google Compute Engine (GCE)|Def: It is a Virtual Server that provides resizable compute Capacity on cloud. Use Case: Hosting websites or applications without needing physical servers.
+| |Elastic Load Balancer (Application LB, Network LB, Gateway LB, Classic LB) |Load Balancer (Application gateway, Front Door and CDN profiles, Load Balancer, Traffic Manager) |Load Balancing|Def: It automatically distributes incoming application traffic across multiple instances at multiple availability zones. Use Case: Ensuring your website stays up, even if one server has an issue. 
+| |Auto Scaling (Horizontal Scaling, Vertical Scaling)  |Auto Scaling (Horizontal Scaling, Vertical Scaling) |AutoScaler|Def: Automatically adjusts the number of servers based on demand. Use Case: Handling varying workloads without manual intervention. 
+| |Elastic Beanstalk|Azure App Service|Google App Engine|Def: A platform for deploying and managing applications without dealing with infracture. Use Case: Simplifying application deployment and scaling.|
+| |Lambda|Azure Functions|Google Cloud Functions|Def: Pay only for the compute time you consume, instead of running code without thinking about servers. Use Case: Handy for quick, small tasks like data processing and application deployment.
+| |ECS (Elastic Container Service) (AWS Fargate, AWS EC2 instance, External instances using ECS Anywhere) |Azure Container Instances|Google Kubernetes Engine|Def: A scalable, secure, and highly efficient way to run containers.Use Case: Efficiently deploy and manage containerized applications.
+| |ECR (Elastic Container Registry)|ACR (Azure Container Registry)|GCR (Google Container Registry)|Def: A place to store and manage Docker container images. Use Case: Storing and sharing container images securely.|
+| |EKS (Elastic Kubernetes Service)|AKS (Azure Kubernetes Service)|GKS (Google Kubernetes Engine)|Def: A managed Kubernetes service for container orchestration. Use Case: Deploying, managing, and scaling containerized applications using kubernetes.|
+| |VPC (Virtual Private Cloud) (Subnet, Route Table, Internet Gateways, NAT Gateway, Egress-only internet gateways, Endpoints, Peering connections, Transit Gateway)|VNet (Virtual Network) (Subnets, Bastion, Firewall, Peering, Virtual WAN, NAT Gateway) |VPC (Virtual Private Cloud)|Def: Your own isolated space in the cloud. Use Case: Running your services privately in the cloud. 
+| |Route 53|Azure DNS & Azure Traffic Manager|Google Cloud DNS|Def: A way to manage domain names and direct internet traffic.Use Case: Registering and directing traffic to your website.|
+| |NAT gateway|NAT Gateway|NAT|Def: Allows private resources to access the internet. Use Case: Enabling secure internet access for resources in a private network.|
+| |Elastic IP|Public IP|Static IP Address|Def: A Static IP address for your cloud resources. Use Case: Ensuring a consistent IP address for your services.|
+| |RDS|Azure SQL Database|SQL|Def: Managed relational database services. Use Case: Setting up, operating, and scaling a relational database in the cloud.
+| |Dynamo DB|Azure Cosmos DB|Google Cloud Firestore, Google Cloud Bigtable|Def: DynamoDB is a NoSQL database that is designed to work with JavaScript. It is a highly scalable database that can be used to store huge amounts of data and still be fast. Use Case: Building highly responsive and scalable applications with low-latency data access.|
+| |S3 (Buckets, Access Grants, Access Points, Object Lambda Access Points, Multi-Region Access Points, Batch Operations) |Azure Blob Storage|Google Cloud Storage|Def: S3 is a distributed database that is connected to every device in the network through the Internet. Use Case: Storing and retrieving data, like images or documents. 
+| |EBS (Elastic Block Store)|Managed Disks|Persistent Disk|Def: Storage space that attaches to virtual machines. Use Case: Providing scalable and high-performance block-level storage for virtual machines.|
+| |EFS|Azure Files|Google Cloud Filestore|Def: Shared storage space for multiple virtual machines. Use Case: Ensuring different servers can access the same files.|
+| |Cloud Watch|Azure Monitor|Stackdriver Monitoring|Def: Monitoring and observability service. Use Case: Collecting and analyzing telemetry data from cloud resources.
+| |Cloud Trail|Azure Activity Log|Stackdriver Logging|Def: Records a resource activity and actions for auditing. Use Case: Monitoring and auditing changes to resources for compliance. Use Case: Improving website and application performance by caching content closer to users.|
+| |Migration|Azure Migrate|Google Cloud Migration Services|Def: Tools and services for migrating on-premises infrastructure to the cloud. Use Case: Streamlining the migration process to the cloud.|
+| |KMS (Key Management Service)|Azure Key Vault|KMS (Key Management Services)|Def: Managed service for creating and controlling access to secrets and keys. Use Case: Securing sensitive information and managing cryptographic keys.|
+| |IAM (Identity and access management service) (users, groups, role)|AAD (Azure Active Directory)|IAM|Def: IAM provides secure and controlled access to AWS services. Use Case: Securely managing and authenticating users accessing cloud resources.|
+| |API Gateway|Azure API Management|Google Cloud Endpoints|Def: Build a secure API that allows users to manipulate, manipulate, & combine data from one or more data sources. Use Case: Simplifying the development and consumption of APIs.|
 
 ### Linux
 
@@ -451,3 +475,5 @@
     * Port 587: Modern, secure SMTP that uses encryption.
     * Port 3389: Remote Desktop Protocol (RDP). RDP enables users to remotely connect to their desktop computers from another device.
     The Internet Assigned Numbers Authority (IANA) maintains the full list of port numbers and protocols assigned to them.
+
+
